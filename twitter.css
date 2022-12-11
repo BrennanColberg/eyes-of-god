@@ -1,0 +1,29 @@
+/* entire trending sidebar */
+div[aria-label="Trending"], 
+/* useless sidebar links */
+a[aria-label="Search and explore"], 
+a[aria-label="Top Articles"], 
+/* all status-focused user information (followers, verified, etc) */
+svg[aria-label="Verified account"],
+  span[data-testid="UserJoinDate"],
+  div[data-testid="UserName"] ~ div:nth-child(4) ~ div,
+  div[data-testid="HoverCard"] > div > div > div:nth-child(3) ~ div ,
+/* interaction counts in inline tweets */
+div[data-testid="reply"] > div > div:nth-child(2),
+div[data-testid="retweet"] > div > div:nth-child(2),
+div[data-testid="unretweet"] > div > div:nth-child(2),
+div[data-testid="like"] > div > div:nth-child(2),
+div[data-testid="unlike"] > div > div:nth-child(2),
+/* interaction counts in focused tweets */
+article[data-testid="tweet"] div[role="group"]:not(:last-child),
+article[data-testid="tweet"]
+	> div
+	> div
+	> div
+	> div:first-child
+	> div
+	> div
+	> div {
+	display: none;
+	/* background-color: red; */
+}
