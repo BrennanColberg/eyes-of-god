@@ -4,7 +4,7 @@
 	"manifest_version": 2,
 	"content_scripts": [
 		{
-			"matches": ["twitter.com"],
+			"matches": ["*://*.twitter.com/*"],
 			"js": ["twitter.js"],
 			"css": ["twitter.css"]
 		}
